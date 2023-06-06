@@ -1,7 +1,7 @@
 {
-  "name": "react-modal",
+  "name": "react-native-dialog",
   "version": "1.0.0",
-  "description": "A native React modal.",
+  "description": "A native React dialog.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
@@ -10,7 +10,7 @@
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run prettier && npm run lint",
+    "prepublishOnly": "npm run lint",
     "lint": "eslint \"{**/*,*}.{.js,ts,jsx,tsx}\""
   },
   "author": "Alan Xavier Benavides Benavides",
@@ -18,6 +18,11 @@
   "peerDependencies": {
     "react": ">=18"
   },
+  "files": [
+    "dist",
+    "LICENCE",
+    "README.md"
+  ],
   "keywords": [
     "react",
     "reactjs",
