@@ -1,9 +1,9 @@
 //React
-import { useRef, useId, useEffect, DialogHTMLAttributes } from "react";
+import React from "react";
 
 
 //Typings
-type Modal = DialogHTMLAttributes<HTMLDialogElement> & {
+type Modal = React.DialogHTMLAttributes<HTMLDialogElement> & {
 	onClose: () => void;
 	open: boolean;
 	children?: any;
@@ -14,10 +14,10 @@ type Modal = DialogHTMLAttributes<HTMLDialogElement> & {
 const Modal = (props: Modal): JSX.Element => {
 
 	//React
-	const ref = useRef<HTMLDialogElement>(null);
-	const id = useId();
+	const ref = React.useRef<HTMLDialogElement>(null);
+	const id = React.useId();
 
-	useEffect( () => {
+	React.useEffect( () => {
 
 		if( props.open ) {
 			ref.current?.showModal();
