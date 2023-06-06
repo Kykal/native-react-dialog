@@ -27,11 +27,13 @@ const Dialog = (props: Dialog): JSX.Element => {
 	const id = React.useId();
 
 
-	const  newAttributes: NewAttributes = {...props};
+	const newAttributes: NewAttributes = {...props};
+	const className = props!.className ? `native-react-dialog ${props!.className}` : 'native-react-dialog';
 
 	delete newAttributes.onClose;
 	delete newAttributes.open;
 	delete newAttributes.children;
+	delete newAttributes.className;
 
 
 	React.useEffect( () => {
@@ -83,7 +85,7 @@ const Dialog = (props: Dialog): JSX.Element => {
 					id={id}
 					ref={ref}
 					onClick={_onClose}
-					className='native-react-dialog'
+					className={className}
 					{...newAttributes}
 				>
 					{props.children}
