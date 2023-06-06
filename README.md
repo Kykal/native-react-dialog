@@ -17,7 +17,7 @@ The rest of props are dialog tag attributes (`HTMLDialogAttributes`).
 - - -
 # Importing the component
 ```tsx
-import Modal from 'native-react-modal';
+import Dialog from 'native-react-modal';
 ```
 - - -
 # Usage example
@@ -26,7 +26,7 @@ import Modal from 'native-react-modal';
 import React from 'react';
 
 //Components
-import Modal from 'native-react-modal';
+import Dialog from 'native-react-modal';
 
 const SomeComponent = () => {
 
