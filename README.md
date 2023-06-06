@@ -3,7 +3,7 @@
 # Content
 1. [Props](#props)
 2. [Importing the component](#importing-the-component)
-3. [Usage](#usage)
+3. [Usage example](#usage-example)
 - - -
 # Props
 The component has multiple props, which two on them are required
@@ -20,22 +20,47 @@ The rest of props are dialog tag attributes (`HTMLDialogAttributes`).
 import Modal from 'native-react-modal';
 ```
 - - -
-# Usage
+# Usage example
 ```tsx
-//States
-const [isOpen, setIsOpen] = React.useState<boolean>(false);
+//React
+import React from 'react';
 
-//Handlers
-conts closeDialogHandler = () => {
-  setIsOpen(false);
+//Components
+import Modal from 'native-react-modal';
+
+
+const SomeComponent = () => {
+
+  //...
+
+  //States
+  const [isOpen, setIsOpen] = React.useState<boolean>(false);
+
+  //Handlers
+  conts closeDialogHandler = () => {
+    setIsOpen(false);
+  }
+  
+  conts openDialogHandler = () => {
+    setIsOpen(true);
+  }
+
+  //...
+
+  return (
+    <>
+      <button
+        onClose={openDialogHandler}
+      >
+        Open dialog!
+      </button>
+      <Modal
+        onClose={closeDialogHandler}
+        open={isOpen}
+      >
+        This is a dialog!
+      </Modal>
+    </>
+  );
 }
-
-//...
-
-<Modal
-  onClose={closeDialogHandler}
-  open={isOpen}
->
-  This is a dialog!
-</Modal>
 ```
