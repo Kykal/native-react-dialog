@@ -2,10 +2,19 @@
 import React from "react";
 
 
+//Styles
+import './Dialog.css';
+
+
 //Typings
 type Dialog = React.DialogHTMLAttributes<HTMLDialogElement> & {
 	onClose: () => void;
 	open: boolean;
+	children?: any;
+}
+type NewAttributes = React.DialogHTMLAttributes<HTMLDialogElement> & {
+	onClose?: () => void;
+	open?: boolean;
 	children?: any;
 }
 
@@ -16,6 +25,14 @@ const Dialog = (props: Dialog): JSX.Element => {
 	//React
 	const ref = React.useRef<HTMLDialogElement>(null);
 	const id = React.useId();
+
+
+	const  newAttributes: NewAttributes = {...props};
+
+	delete newAttributes.onClose;
+	delete newAttributes.open;
+	delete newAttributes.children;
+
 
 	React.useEffect( () => {
 
@@ -60,14 +77,19 @@ const Dialog = (props: Dialog): JSX.Element => {
 
 	//Main component render
 	return (
-		<dialog
-			id={id}
-			ref={ref}
-			{...props}
-			onClick={_onClose}
-		>
-			{props.children}
-		</dialog>
+		<>
+			{props.open && (
+				<dialog
+					id={id}
+					ref={ref}
+					onClick={_onClose}
+					className='native-react-dialog'
+					{...newAttributes}
+				>
+					{props.children}
+				</dialog>
+			)}
+		</>
 	);
 };
 

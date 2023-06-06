@@ -1,6 +1,6 @@
 {
   "name": "native-react-dialog",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A native React dialog.",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",

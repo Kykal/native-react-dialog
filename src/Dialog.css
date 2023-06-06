@@ -1,0 +1,9 @@
+dialog.native-react-dialog {
+	border: none;
+	padding: none;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+}
+
+dialog.native-react-dialog::backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
