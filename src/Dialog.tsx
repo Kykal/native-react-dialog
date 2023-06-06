@@ -3,7 +3,7 @@ import React from "react";
 
 
 //Typings
-type Modal = React.DialogHTMLAttributes<HTMLDialogElement> & {
+type Dialog = React.DialogHTMLAttributes<HTMLDialogElement> & {
 	onClose: () => void;
 	open: boolean;
 	children?: any;
@@ -11,7 +11,7 @@ type Modal = React.DialogHTMLAttributes<HTMLDialogElement> & {
 
 
 //Main component content
-const Modal = (props: Modal): JSX.Element => {
+const Dialog = (props: Dialog): JSX.Element => {
 
 	//React
 	const ref = React.useRef<HTMLDialogElement>(null);
@@ -72,4 +72,4 @@ const Modal = (props: Modal): JSX.Element => {
 };
 
 
-export default Modal; //Export main component
+export default Dialog; //Export main component
