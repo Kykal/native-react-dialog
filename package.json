@@ -1,5 +1,5 @@
 {
-  "name": "react-native-dialog",
+  "name": "native-react-dialog",
   "version": "1.0.0",
   "description": "A native React dialog.",
   "main": "./dist/cjs/index.js",
