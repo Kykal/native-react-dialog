@@ -28,7 +28,6 @@ import React from 'react';
 //Components
 import Modal from 'native-react-modal';
 
-
 const SomeComponent = () => {
 
   //...
