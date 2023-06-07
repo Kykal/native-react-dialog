@@ -28,6 +28,7 @@ import React from 'react';
 //Components
 import Dialog from 'native-react-modal';
 
+//Your component
 const SomeComponent = () => {
 
   //...
@@ -53,12 +54,12 @@ const SomeComponent = () => {
       >
         Open dialog!
       </button>
-      <Modal
+      <Dialog
         onClose={closeDialogHandler}
         open={isOpen}
       >
         This is a dialog!
-      </Modal>
+      </Dialog>
     </>
   );
 }
