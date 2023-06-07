@@ -21,7 +21,9 @@ import Dialog from 'native-react-modal';
 ```
 - - -
 # Usage example
+![dialog-example](https://github.com/Kykal/native-react-dialog/assets/54295964/1f2b027c-4226-4c25-b062-6dab81e57ef3)
 ```tsx
+
 //React
 import React from 'react';
 
